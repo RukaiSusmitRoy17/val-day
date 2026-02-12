@@ -1,5 +1,5 @@
 const gifStages = [
-    "https://media.tenor.com/rPiWjOBkoO0AAAAj/cinnamoroll-sanrio.gif",    // 0 shatter
+    "",    // 0 shatter
     "https://media.tenor.com/rPiWjOBkoO0AAAAj/cinnamoroll-sanrio.gif",    // 1 shatter
     "https://media.tenor.com/nPZmKB04o_sAAAAj/cinnamoroll.gif",  // 2 waaa
     "https://media.tenor.com/YU3mvP2PzdsAAAAj/sanrio.gif",  // 3 about to cry
@@ -8,8 +8,6 @@ const gifStages = [
     "https://c.tenor.com/apWeoyOOvtUAAAAd/tenor.gif",   // 6 devastated
     "https://c.tenor.com/3AkI0IyP0QgAAAAd/tenor.gif",  // 7 daze
     "https://media.tenor.com/orFLTNidP6YAAAAj/cinnamoroll.gif",  // 8 crying runaway
-     "https://media.tenor.com/orFLTNidP6YAAAAj/cinnamoroll.gif"  // 9 mad
-
 ]
 
 const noMessages = [
