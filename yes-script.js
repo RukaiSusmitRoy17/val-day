@@ -1,54 +1,30 @@
 let musicPlaying = false
-let music = null
 
 window.addEventListener('load', () => {
     launchConfetti()
 
-    music = document.getElementById('bg-music')
-    music.volume = 0
-    music.play().then(() => {
-        fadeInMusic()
-        musicPlaying = true
-        document.getElementById('music-toggle').textContent = '🔊'
-    }).catch(() => {})
+    // Autoplay music (works since user clicked Yes to get here)
+    const music = document.getElementById('bg-music')
+    music.volume = 0.3
+    music.play().catch(() => {})
+    musicPlaying = true
+    document.getElementById('music-toggle').textContent = '🔊'
 })
 
-/* ---------- Smooth Music Fade In ---------- */
-function fadeInMusic() {
-    const targetVolume = 0.3
-    const step = 0.02
-    const interval = setInterval(() => {
-        if (music.volume < targetVolume) {
-            music.volume = Math.min(music.volume + step, targetVolume)
-        } else {
-            clearInterval(interval)
-        }
-    }, 100)
-}
-
-/* ---------- Elegant Confetti ---------- */
 function launchConfetti() {
-    const colors = [
-        '#d4af37', // gold
-        '#f5deb3', // soft wheat
-        '#ffffff', // white
-        '#e6c79c', // champagne
-        '#c0c0c0'  // silver
-    ]
-
-    const duration = 5000
+    const colors = ['#ff69b4', '#ff1493', '#ff85a2', '#ffb3c1', '#ff0000', '#ff6347', '#fff', '#ffdf00']
+    const duration = 6000
     const end = Date.now() + duration
 
-    // Soft center burst
+    // Initial big burst
     confetti({
-        particleCount: 120,
-        spread: 80,
-        origin: { x: 0.5, y: 0.4 },
-        colors,
-        scalar: 1.1
+        particleCount: 150,
+        spread: 100,
+        origin: { x: 0.5, y: 0.3 },
+        colors
     })
 
-    // Subtle side drift
+    // Continuous side cannons
     const interval = setInterval(() => {
         if (Date.now() > end) {
             clearInterval(interval)
@@ -56,29 +32,25 @@ function launchConfetti() {
         }
 
         confetti({
-            particleCount: 25,
+            particleCount: 40,
             angle: 60,
-            spread: 50,
-            origin: { x: 0, y: 0.7 },
-            colors,
-            scalar: 0.9
+            spread: 55,
+            origin: { x: 0, y: 0.6 },
+            colors
         })
 
         confetti({
-            particleCount: 25,
+            particleCount: 40,
             angle: 120,
-            spread: 50,
-            origin: { x: 1, y: 0.7 },
-            colors,
-            scalar: 0.9
+            spread: 55,
+            origin: { x: 1, y: 0.6 },
+            colors
         })
-    }, 400)
+    }, 300)
 }
 
-/* ---------- Music Toggle ---------- */
 function toggleMusic() {
-    if (!music) return
-
+    const music = document.getElementById('bg-music')
     if (musicPlaying) {
         music.pause()
         musicPlaying = false

@@ -2,42 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>For You</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Will you be my Valentine? 💕</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="overlay"></div>
+    <div class="hearts-bg"></div>
 
     <div class="container">
-        <h1>Can I keep choosing you?</h1>
-        <p class="sub-text">
-            Not just today. Not just because it's cute.
-            <br>
-            But because you feel like home.
-        </p>
+        <h1>Will you be my Valentine? 💕</h1>
 
-        <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7"
-                 alt="romantic golden hour">
+        <div class="gif-container">
+            <img id="cat-gif" src="https://media.tenor.com/EBV7OT7ACfwAAAAj/u-u-qua-qua-u-quaa.gif" alt="cute character">
         </div>
 
         <div class="buttons">
-            <button class="yes-btn" onclick="handleYesClick()">Always</button>
-            <button class="no-btn" onclick="handleNoClick()">Let me think 👀</button>
+            <button id="yes-btn" onclick="handleYesClick()">Yes</button>
+            <button id="no-btn" onclick="handleNoClick()">No</button>
         </div>
-
-        <div id="response-message"></div>
+        <div id="tease-toast"></div>
     </div>
 
-    <audio id="bg-music" loop>
+    <audio id="bg-music" loop autoplay muted>
         <source src="music/beabadoobee - Glue Song (Lyrics).mp3" type="audio/mpeg">
     </audio>
 
-    <button id="music-toggle" onclick="toggleMusic()">♪</button>
+    <button id="music-toggle" onclick="toggleMusic()" title="Toggle music">🔊</button>
 
     <script src="script.js"></script>
 </body>
