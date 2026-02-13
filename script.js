@@ -1,24 +1,23 @@
 const gifStages = [
-    "https://media.tenor.com/EBV7OT7ACfwAAAAj/u-u-qua-qua-u-quaa.gif",    // 0 normal
-    "https://media1.tenor.com/m/uDugCXK4vI4AAAAd/chiikawa-hachiware.gif",  // 1 confused
-    "https://media.tenor.com/f_rkpJbH1s8AAAAj/somsom1012.gif",             // 2 pleading
-    "https://media.tenor.com/OGY9zdREsVAAAAAj/somsom1012.gif",             // 3 sad
-    "https://media1.tenor.com/m/WGfra-Y_Ke0AAAAd/chiikawa-sad.gif",       // 4 sadder
-    "https://media.tenor.com/CivArbX7NzQAAAAj/somsom1012.gif",             // 5 devastated
-    "https://media.tenor.com/5_tv1HquZlcAAAAj/chiikawa.gif",               // 6 very devastated
-    "https://media1.tenor.com/m/uDugCXK4vI4AAAAC/chiikawa-hachiware.gif"  // 7 crying runaway
+    "https://c.tenor.com/tu8hB6hlyqsAAAAd/tenor.gif",    // 0 no
+    "https://c.tenor.com/nrUSvJyyjOkAAAAd/tenor.gif",    // 1 muuu
+    "https://c.tenor.com/YmJP56Fgg2QAAAAd/tenor.gif",  // 2 pengiun
+    "https://c.tenor.com/Gn1wfkfGNRUAAAAd/tenor.gif",  // 3 tomoyo
+    "https://c.tenor.com/JyIKVVJDP0QAAAAd/tenor.gif", // 4 sparkle
+    "https://c.tenor.com/piu7iJuT8i8AAAAd/tenor.gif",       // 5 preach
+    "https://c.tenor.com/X2sc5wL8Qo0AAAAd/tenor.gif",   // 6 nodd
+    "https://c.tenor.com/NpAcs65uXuUAAAAd/tenor.gif",  // 7 Stuff
 ]
 
 const noMessages = [
     "No",
-    "Are you positive? 🤔",
-    "Pookie please... 🥺",
-    "If you say no, I will be really sad...",
-    "I will be very sad... 😢",
-    "Please??? 💔",
-    "Don't do this to me...",
-    "Last chance! 😭",
-    "You can't catch me anyway 😜"
+    "Muuu! 😲",
+    "But pro que? 🥺",
+    "You know you love me!!!! 😉",
+    "We are ✨MEANT✨ to be!",
+    "Why deny our love? 💔",
+    "Everyone agrees! 😏",
+    "So STFU and aceppt it!😜"
 ]
 
 const yesTeasePokes = [
@@ -34,7 +33,7 @@ let noClickCount = 0
 let runawayEnabled = false
 let musicPlaying = true
 
-const catGif = document.getElementById('cat-gif')
+const catGif = document.getElementById('ccs')
 const yesBtn = document.getElementById('yes-btn')
 const noBtn = document.getElementById('no-btn')
 const music = document.getElementById('bg-music')
@@ -108,8 +107,8 @@ function handleNoClick() {
     const gifIndex = Math.min(noClickCount, gifStages.length - 1)
     swapGif(gifStages[gifIndex])
 
-    // Runaway starts at click 5
-    if (noClickCount >= 5 && !runawayEnabled) {
+    // Runaway starts at click 7
+    if (noClickCount >= 7 && !runawayEnabled) {
         enableRunaway()
         runawayEnabled = true
     }
