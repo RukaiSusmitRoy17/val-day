@@ -1,5 +1,5 @@
 const gifStages = [
-    "",    // 0 shatter
+    "https://media.tenor.com/rPiWjOBkoO0AAAAj/cinnamoroll-sanrio.gif",    // 0 shatter
     "https://media.tenor.com/rPiWjOBkoO0AAAAj/cinnamoroll-sanrio.gif",    // 1 shatter
     "https://media.tenor.com/nPZmKB04o_sAAAAj/cinnamoroll.gif",  // 2 waaa
     "https://media.tenor.com/YU3mvP2PzdsAAAAj/sanrio.gif",  // 3 about to cry
@@ -110,7 +110,7 @@ function handleNoClick() {
     swapGif(gifStages[gifIndex])
 
     // Runaway starts at click 5
-    if (noClickCount >= 5 && !runawayEnabled) {
+    if (noClickCount >= 7 && !runawayEnabled) {
         enableRunaway()
         runawayEnabled = true
     }
