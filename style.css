@@ -49,15 +49,13 @@ h1 {
 
 /* Image styling (IMPORTANT FIX) */
 #cat-gif {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    border-radius: 18px;
-    object-fit: cover;
-    margin: 30px auto;
-    display: block;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s ease, opacity 0.4s ease;
+width: 100%;
+max-width: 380px;   /* limit size */
+height: auto;
+border-radius: 16px;
+margin: 30px auto;
+display: block;
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 #cat-gif:hover {
